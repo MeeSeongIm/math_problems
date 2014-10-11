@@ -1,0 +1,84 @@
+# P1: multiples of 3 or 5 below 5000
+
+m=5000
+
+mult_three = 0
+for i in range(m):
+    if i % 3==0:
+        mult_three += i
+mult_three  
+
+mult_five = 0
+for i in range(m):
+    if i %5 ==0:
+        mult_five += i 
+        mult_five
+
+common_intersection = 0
+for i in range(m):
+    if i %3 ==0 and i % 5==0:
+        common_intersection += i
+        common_intersection
+    
+total = mult_three + mult_five - common_intersection
+print(total)
+
+
+
+# P2: the sum of even fibonacci numbers less than 10000000. 
+# fib num: 1, 2, 3, 5, 8, ...  
+
+def fib_seq(n):
+    result = []
+    a = 1 
+    b = 2 
+    while a < n:
+        result.append(a)
+        a, b = b, a + b  # change input simultaneously! 
+     
+    subset = []
+    for n in result:
+        if n % 2 == 0:
+            subset.append(n)
+    return subset 
+        
+print(sum(fib_seq(10000000))) 
+
+
+
+#P3: largest prime factor of 600851475143 
+
+def prime_num(n):
+    i=2
+    while i**2 < n:
+        while n % i ==0:
+            n = n/i
+        i+=1
+    return n
+
+print(prime_num(600851475143))
+
+
+
+
+#P4: Largest palindrome integer which is the product of two 3-digit integers.
+set = []
+for x in range(99,1000):
+    for y in range(99,1000):
+        if str(x*y)==str(x*y)[::-1]:
+            set.append(x*y)
+new_set = []
+while set:
+    min = set[0]
+    for x in set:
+        if x < min:
+            min = x
+    new_set.append(min)
+    set.remove(min)
+print (new_set[len(new_set)-1])
+# a slight problem with my code: new_set prints each palindromic number twice. 
+
+
+
+
+
