@@ -1,0 +1,33 @@
+# prints a string of letters in reverse order. 
+
+word = input("Word: ")
+
+def backward(n):
+    set = ""
+    for i in range(len(str(n))):
+        set = set + n[len(n)-i-1]
+    return set
+            
+print(word + " spelled backwards is " + backward(word)+ ".")
+
+
+
+# prints every second letter of a word in reverse order.
+
+word = input("Another word: ")
+def second_rev(k):
+    set = ""
+    for i in range(len(str(k))):
+        set = set + k[len(k)-i-1]
+    modified = ""
+    for i in range(int(len(str(set))/2)):
+        if len(str(set)) % 2 ==0:
+            modified += set[2*i]
+        else:
+            modified += set[2*i+1]
+        
+    return modified
+print(second_rev(word))
+    
+
+
