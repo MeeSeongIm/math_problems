@@ -7,7 +7,6 @@ def backward(n):
     for i in range(len(str(n))):
         set = set + n[len(n)-i-1]
     return set
-            
 print(word + " spelled backwards is " + backward(word)+ ".")
 
 
@@ -25,9 +24,40 @@ def second_rev(k):
             modified += set[2*i]
         else:
             modified += set[2*i+1]
-        
     return modified
 print(second_rev(word))
     
+
+
+
+
+# split a string by commas 
+user = input("Any word: ") 
+comma = "" 
+for i in range(len(str(user))):
+    comma = comma + user[i] + ","
+print(comma)    
+
+
+
+# write a string vertically 
+user = input("Splitting a string by lines. Word: ")
+lines = ""
+for i in range(len(str(user))):
+    lines = lines + user[i] + "\n"
+print(lines)
+
+
+
+
+
+
+# split a string by two spaces 
+person = input("Word: ")
+two_space = ""
+for i in range(len(str(person))):
+    two_space = two_space + person[i] + "  "
+print(two_space)
+
 
 
