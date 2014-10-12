@@ -28,7 +28,7 @@ print(second_rev(word))
     
 
 
-# split a string by commas 
+# splits a string by commas 
 user = input("Any word: ") 
 comma = "" 
 for i in range(len(str(user))):
@@ -37,7 +37,7 @@ print(comma)
 
 
 
-# write a string vertically 
+# writes a string vertically 
 user = input("Splitting a string by lines. Word: ")
 lines = ""
 for i in range(len(str(user))):
@@ -46,7 +46,7 @@ print(lines)
 
 
 
-# split a string by two spaces 
+# splits a string by two spaces 
 person = input("Word: ")
 two_space = ""
 for i in range(len(str(person))):
@@ -55,7 +55,7 @@ print(two_space)
 
 
 
-# Add every odd term in a Fibonacci sequence up to (and including) n, where n=6000000.
+# adds every odd term in a Fibonacci sequence up to (and including) n, where n=6000000.
 
 seq = []
 odd =[]
@@ -73,7 +73,7 @@ print(sum(fib(n)))
  
 
 
-# Add every third term in a Fibonacci sequence up to (and including) n, where n=60000000.
+# adds every third term in a Fibonacci sequence up to (and including) n, where n=60000000.
 
 seq = []
 odd = []
@@ -88,5 +88,17 @@ def fib(n):
         odd.append(seq[3*k+2])
     return odd
 print(sum(fib(n)))
+
+
+
+# pig latin
+user= input("Word: ")
+def pig_latin(n):
+    new_word = ""
+    new_word = n + n[0] + "ay"
+    new_word = new_word[1:len(new_word)]
+    return new_word
+print(pig_latin(user))
+
 
 
