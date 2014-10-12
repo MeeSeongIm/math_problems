@@ -1,7 +1,6 @@
 # prints a string of letters in reverse order. 
 
 word = input("Word: ")
-
 def backward(n):
     set = ""
     for i in range(len(str(n))):
@@ -29,8 +28,6 @@ print(second_rev(word))
     
 
 
-
-
 # split a string by commas 
 user = input("Any word: ") 
 comma = "" 
@@ -49,9 +46,6 @@ print(lines)
 
 
 
-
-
-
 # split a string by two spaces 
 person = input("Word: ")
 two_space = ""
@@ -59,5 +53,40 @@ for i in range(len(str(person))):
     two_space = two_space + person[i] + "  "
 print(two_space)
 
+
+
+# Add every odd term in a Fibonacci sequence up to (and including) n, where n=6000000.
+
+seq = []
+odd =[]
+n = 6000000
+def fib(n):
+    a=1
+    b=2
+    while a <= n:
+        seq.append(a)
+        a,b=b,a+b
+    for k in range(int(len(seq)/2)):
+        odd.append(seq[2*k])
+    return odd
+print(sum(fib(n)))
+ 
+
+
+# Add every third term in a Fibonacci sequence up to (and including) n, where n=60000000.
+
+seq = []
+odd = []
+n = 60000000
+def fib(n):
+    a=1
+    b=2
+    while a<=n:
+        seq.append(a)
+        a,b=b,a+b
+    for k in range(int(len(seq)/3)):
+        odd.append(seq[3*k+2])
+    return odd
+print(sum(fib(n)))
 
 
