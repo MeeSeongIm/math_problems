@@ -102,3 +102,27 @@ print(pig_latin(user))
 
 
 
+# case-insensitive string comparison by ignoring all numbers, symbols, and spaces. 
+word1= input("First Comment: ").lower()
+word2= input("Second Comment: ").lower()
+
+new_word1 = ""
+new_word2 = ""
+
+for i in range(len(str(word1))):
+    if str(word1)[i].isalpha() == True:
+        new_word1 += str(word1)[i]
+for i in range(len(str(word2))):
+    if str(word2)[i].isalpha() == True:
+        new_word2 += str(word2)[i]
+print("\n")        
+print("With all symbols, numbers, and spaces removed, your first word is " + new_word1 + ".")
+print("And with all symbols, numbers, and spaces removed, your second word is " + new_word2 + ".")
+ 
+print("\n")    
+if new_word1 == new_word2:
+    print("Thus the two inputs are the same. ")
+else:
+    print("Thus the two inputs are different.")
+
+
