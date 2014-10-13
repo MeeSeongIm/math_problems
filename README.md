@@ -1,5 +1,4 @@
 math_problems_py
 ================
 
-This is a python script containing a list of math problems and their solutions.
-In the coming days, I intend to write my own problems, codes and solutions and add them to this file.
+Here are python scripts containing a list of math problems and their solutions. The file collections_original_probs_py contains a list of original problems, codes, and their solutions.
