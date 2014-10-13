@@ -126,3 +126,35 @@ else:
     print("Thus the two inputs are different.")
 
 
+
+
+# search user's text (input) for a specific word (or words).
+# symbols, letters, and numbers are accounted for but not spaces (spaces are ignored). 
+user_para = input("Please write something here: ")
+user_search = input("Type something that we should search for: ")
+
+new_user_para = []
+new_user_search = []
+for i in range(len(str(user_para))):
+    if str(user_para)[i] != " ":
+        new_user_para.append(str(user_para)[i])
+for i in range(len(str(user_search))):
+    if str(user_search)[i] != " ":
+        new_user_search.append(str(user_search)[i])
+
+#print(new_user_para)
+#print(new_user_search)
+
+words_to_search = [] 
+for i in range(len(new_user_para)):
+    if new_user_para[i:i+len(new_user_search)] == new_user_search[:len(new_user_search)]:
+        words_to_search.append(new_user_search[:len(new_user_search)])
+        i += len(new_user_search)
+    else:
+        i += 1
+print (words_to_search)
+
+print("Your '%s' appears %s times in your '%s'." % (user_search, len(words_to_search), user_para))
+
+
+
