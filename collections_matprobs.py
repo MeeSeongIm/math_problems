@@ -154,3 +154,19 @@ for c in range(1,1000):
 
 # P25: the first term in the Fibonacci sequence to contain 1000 digits.  
 
+list = []
+a = 1
+b = 1
+n = 5*10**1000
+while a < n:
+    list.append(a)
+    a, b = b, a+b
+
+ 
+ 
+for k in range(len(list)):
+    if list[k] > 10**999:
+        print(list[k])
+        print(k)
+        
+
