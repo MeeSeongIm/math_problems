@@ -153,7 +153,7 @@ for k in range(len(list)):
         print(k)
         
 
-#P44. find the minimum among those pentagonal numbers whose difference and sum are also pentagonal numbers. 
+#P44. find the minimum among the difference of those pentagonal numbers whose difference and sum are also pentagonal numbers. 
 def penta(n):
     for i in range(1,n+1):
         yield i*(3*i-1)/2
