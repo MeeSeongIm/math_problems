@@ -146,3 +146,11 @@ for c in range(1,1000):
             if a**2 + b**2 == c**2 and a + b + c == 1000:
                 print(a*b*c)
 
+
+
+
+
+
+
+# P25: the first term in the Fibonacci sequence to contain 1000 digits.  
+
