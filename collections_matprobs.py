@@ -162,6 +162,26 @@ set_penta = set(penta(3000))
 output = {m-n for m in set_penta for n in set_penta if m-n in set_penta and m+n in set_penta}
 print(min(output))
 
+#P45. find the triangle number greater than 40755 which is also pentagonal and hexagonal. 
+#Note: if x is a hexagonal number, then it is also a triangular number. Prove this by replacing n with 2n-1.
+ 
+def triangle(n):
+    for i in range(1,n+1):
+        yield i*(i+1)/2
+
+def pentagonal(n):
+    for i in range(1,n+1):
+        yield i*(3*i-1)/2
+
+def hexagonal(n):
+    for i in range(1,n+1):
+        yield i*(2*i-1)
+
+triangle_set = set(triangle(56000))
+pentagonal_set = set(pentagonal(40000))
+
+print({m for m in pentagonal_set if m in triangle_set and m >5482660})
+
 
 
 
