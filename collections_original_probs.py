@@ -9,7 +9,6 @@ def backward(n):
 print(word + " spelled backwards is " + backward(word)+ ".")
 
 
-
 # prints every second letter of a word in reverse order.
 
 word = input("Another word: ")
@@ -27,14 +26,12 @@ def second_rev(k):
 print(second_rev(word))
     
 
-
 # splits a string by commas 
 user = input("Any word: ") 
 comma = "" 
 for i in range(len(str(user))):
     comma = comma + user[i] + ","
 print(comma)    
-
 
 
 # writes a string vertically 
@@ -45,14 +42,12 @@ for i in range(len(str(user))):
 print(lines)
 
 
-
 # splits a string by two spaces 
 person = input("Word: ")
 two_space = ""
 for i in range(len(str(person))):
     two_space = two_space + person[i] + "  "
 print(two_space)
-
 
 
 # adds every odd term in a Fibonacci sequence up to (and including) n, where n=6000000.
@@ -72,7 +67,6 @@ def fib(n):
 print(sum(fib(n)))
  
 
-
 # adds every third term in a Fibonacci sequence up to (and including) n, where n=60000000.
 
 seq = []
@@ -90,7 +84,6 @@ def fib(n):
 print(sum(fib(n)))
 
 
-
 # pig latin
 user= input("Word: ")
 def pig_latin(n):
@@ -99,7 +92,6 @@ def pig_latin(n):
     new_word = new_word[1:len(new_word)]
     return new_word
 print(pig_latin(user))
-
 
 
 # case-insensitive string comparison by ignoring all numbers, symbols, and spaces. 
@@ -126,8 +118,6 @@ else:
     print("Thus the two inputs are different.")
 
 
-
-
 # search user's text (input) for a specific word (or words).
 # symbols, letters, and numbers are accounted for but not spaces (spaces are ignored). 
 user_para = input("Please write something here: ")
@@ -142,9 +132,6 @@ for i in range(len(str(user_search))):
     if str(user_search)[i] != " ":
         new_user_search.append(str(user_search)[i])
 
-#print(new_user_para)
-#print(new_user_search)
-
 words_to_search = [] 
 for i in range(len(new_user_para)):
     if new_user_para[i:i+len(new_user_search)] == new_user_search[:len(new_user_search)]:
@@ -157,9 +144,7 @@ print (words_to_search)
 print("Your '%s' appears %s times in your '%s'." % (user_search, len(words_to_search), user_para))
 
 
-
-
-
+ 
 # a sequence is composed of triangular numbers if it is a sequence whose nth number
 # is the sum of n natural numbers from 1 to n,
 # e.g., 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
@@ -192,6 +177,30 @@ for i in list(range(0,k+1)):
 r = [q[i+1]-q[i] for i in list(range(0,len(q)-1))]
 
 print(r)
+
+# check whether a number is prime
+
+def prime_checker(x):
+    x = abs(int(x))
+    if x <2:
+        return False
+    if x ==2:
+        return True
+    for i in range(3, int(x**0.5)+1):
+        if x % i ==0:
+            return False
+    if x >2 and x %2==0:
+        return False
+    else:
+        return True
+
+print(prime_checker(-2)) 
+print(prime_checker(1))    
+print(prime_checker(2))
+print(prime_checker(3))
+print(prime_checker(4))
+print(prime_checker(5))
+print(prime_checker(29)) 
 
 
 
