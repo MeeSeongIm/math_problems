@@ -22,7 +22,6 @@ total = mult_three + mult_five - common_intersection
 print(total)
 
 
-
 # P2: the sum of even fibonacci numbers less than 10000000. 
 # fib num: 1, 2, 3, 5, 8, ...  
 
@@ -43,7 +42,6 @@ def fib_seq(n):
 print(sum(fib_seq(10000000))) 
 
 
-
 #P3: largest prime factor of 600851475143 
 def prime_num(n):
     i=2
@@ -54,8 +52,6 @@ def prime_num(n):
     return n
 
 print(prime_num(600851475143))
-
-
 
 
 #P4: Largest palindrome integer which is the product of two 3-digit integers.
@@ -76,10 +72,6 @@ print (new_set[len(new_set)-1])
 # a slight problem with my code: new_set prints each palindromic number twice. 
 
 
-
-
-
-
 #P6: the difference between the square of the sum of the first 100 natural numbers
 #    and the sum of the squares of the first 1000 natural numbers.  
 
@@ -95,8 +87,6 @@ for i in range(1,k+1):
 n = n**2
 
 print(n-m)
-
-
 
 
 #P8: 
@@ -131,10 +121,6 @@ for i in range(0, len(n)-k+1):
 print(max(l))
 
 
-
-
-
-
 #P9: find abc for which (a,b,c) is the Pythagorean tuple for which a+b+c = 1000. 
 #a = int(a) < b
 #b = int(b) < c
@@ -145,9 +131,6 @@ for c in range(1,1000):
         for a in range(1,b):
             if a**2 + b**2 == c**2 and a + b + c == 1000:
                 print(a*b*c)
-
-
-
 
 
 
@@ -169,4 +152,17 @@ for k in range(len(list)):
         print(list[k])
         print(k)
         
+
+#P44. find the minimum among those pentagonal numbers whose difference and sum are also pentagonal numbers. 
+def penta(n):
+    for i in range(1,n+1):
+        yield i*(3*i-1)/2
+
+set_penta = set(penta(3000))
+output = {m-n for m in set_penta for n in set_penta if m-n in set_penta and m+n in set_penta}
+print(min(output))
+
+
+
+
 
