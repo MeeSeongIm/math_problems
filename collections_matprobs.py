@@ -183,6 +183,16 @@ pentagonal_set = set(pentagonal(40000))
 print({m for m in pentagonal_set if m in triangle_set and m >5482660})
 
 
+#P48. Find the last 10 digits of the finite sum  \sum_i=1^{1000} i^i
+
+N = sum(i**i for i in range(1,1001))
+M = str(N)
+print(M[len(M)-10:len(M)])
+
+
+
+
+
 
 
 
