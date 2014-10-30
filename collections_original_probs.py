@@ -203,8 +203,26 @@ print(prime_checker(5))
 print(prime_checker(29)) 
 
 
+# prints a list of primes 
 
+import math
+def detecting_primes(n):
+    if n < 1:
+        return []
+    prime_list = [2]
+    j = 3
+    while n > len(prime_list):
+        for i in range(len(prime_list)):
+            if j % prime_list[i] == 0:
+                break
+            if prime_list[i] > math.sqrt(j):
+                prime_list.append(j)
+                break
 
+        j += 2
+    return prime_list
+
+print(detecting_primes(100))
 
 
 
