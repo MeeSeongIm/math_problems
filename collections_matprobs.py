@@ -193,6 +193,53 @@ print(M[len(M)-10:len(M)])
 
 
 
+#P50. Which prime below 1000000 can be written as the sum of the most consecutive primes?
+# Example: 41 can be written as the sum of 6 consecutive primes. 
+# 41 = 2+ 3 + 5 + 7 + 11+ 13
+# rewrite this code with lower complexity and remove unnecessary computations.  
+
+N = 1000000
+
+import math
+def detecting_primes(n):
+    if n < 1:
+        return []
+    prime_list = [2]
+    j = 3
+    while n > len(prime_list):
+        for i in range(len(prime_list)):
+            if j % prime_list[i] == 0:
+                break
+            if prime_list[i] > math.sqrt(j):
+                prime_list.append(j)
+                break
+
+        j += 2
+    return prime_list
+
+print(detecting_primes(N)) 
+
+def is_prime(x):
+    for i in range(2,int(math.sqrt(x))+1):
+        if x % i ==0:
+            return False
+        else:
+            return True
+ 
+sum_of_consecutive_primes = []
+   
+for j in list(range(N))[::-1]:
+    for i in list(range(0,N)):
+        partial_sum = sum(detecting_primes(N)[k] for k in range(i,j))  
+        if is_prime(partial_sum) == True:
+            sum_of_consecutive_primes.append(partial_sum)  
+
+print(sum_of_consecutive_primes)    
+ 
+
+
+
+
 
 
 
