@@ -225,6 +225,25 @@ def detecting_primes(n):
 print(detecting_primes(100))
 
 
+# find all unordered partitions of N >= 0. 
+ 
+def P(n): 
+    if n == 0:
+        yield []
+        return
+
+    for p in P(n-1):        
+        p.append(1)
+        yield p
+        p.pop()
+        if p and (len(p) < 2 or p[-2] > p[-1]):
+            p[-1] += 1
+            yield p
+
+for i in P(6):
+    print(i)
+    
+
 
 
 
